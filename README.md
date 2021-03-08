@@ -1,6 +1,6 @@
 # Approaches to a Variational Autoencoder for Gaia DR2 data
 ## Why?
-Implementing a reliable VAE that could compress and accurately reconstruct astrophysical data sets, such as Gaia, could provide a number of benefits. Firstly, it would allow researchers to conduct representative data sampling from the latent space of a compressed data set before one is ready to release the entire data set. Additionally, it could obviously allow for reliable compression to send/recieve large chunks of the data set, which as raw data can run into the **terrabytes**.
+Implementing a reliable VAE that could compress and accurately reconstruct astrophysical data sets, such as Gaia, could provide a number of benefits. Firstly, it would allow researchers to conduct representative data sampling from the latent space of a compressed data set before one is ready to release the entire data set. Additionally, it could obviously allow for reliable compression to send/recieve large chunks of the data set, which as raw data can run into the **terabytes**.
 ## Process
 I began by selecting a condensed list of 25 features to query from Gaia (along with cuts to remove null data), and when first getting started I even omitted the 9 error fields, leaving only 16 training features. The plan was to design an autoencoder that reliably compressed and reconstructed these features, and then modify it to work on objects with values for **all** fields offered by Gaia.
 ```SQL
